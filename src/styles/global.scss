@@ -1,0 +1,13 @@
+body {
+  background-color: #0d2034;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

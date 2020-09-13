@@ -1,8 +1,18 @@
+const defaults = {
+  title: "Rob Steilberg",
+  description: "Rob Steilberg's home page",
+  icon: "src/images/favicon.png",
+};
+
+const icon = "src/images/favicon.png";
+
 module.exports = {
   siteMetadata: {
-    title: `Robert Steilberg's Personal Site`,
-    description: `Personal website for Robert Steilberg`,
-    author: `@robertsteilberg`,
+    title: defaults.title,
+    description: defaults.description,
+    author: "@robertsteilberg",
+    url: "",
+    icon: defaults.icon,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,22 +23,42 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        icon,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`EB Garamond`, `PT Serif Caption`, `Roboto`],
+        display: "swap",
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: defaults.description,
+        short_name: defaults.title,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#0d2034`,
+        theme_color: `#ffffff`,
+        lang: `en`,
+        display: `standalone`,
+        icon: defaults.icon,
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`],
+      },
+    },
   ],
-}
+};

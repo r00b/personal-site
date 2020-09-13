@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  height: 50px;
+  background-color: rgba(0, 0, 0, .3);
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+    margin-right: 8px;
+
+    &.github {
+      width: 17px;
+      height: 17px;
+    }
+
+    &.resume {
+      width: 15px;
+      height: 15px;
+      margin-right: 6px;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 17px;
+    padding: 10px;
+    transition: background .3s ease-out;
+
+    &:first-child {
+      padding-left: 15px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .5);
+    }
+  }
+}
