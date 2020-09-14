@@ -6,7 +6,7 @@ import loadable from "@loadable/component";
 // react-text-transition cannot do SSR
 const TextTransition = loadable(() => import("react-text-transition"));
 
-const WS_URL = `ws://localhost:80/airports/kdca?secret=${process.env.SERVE1090_SECRET}`;
+const WS_URL = `ws://localhost:80/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {

@@ -6,6 +6,10 @@ const defaults = {
 
 const icon = "src/images/favicon.png";
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: defaults.title,
