@@ -1,3 +1,19 @@
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  height: inherit;
+
+  > div {
+    height: inherit;
+
+    > div {
+      height: inherit;
+    }
+  }
+}
+
 body {
   margin: 0;
   font-family: "EB Garamond", sans-serif;
@@ -5,6 +21,7 @@ body {
 
   .bg-image {
     height: 100vh;
+    height: -webkit-fill-available;
     width: 100vw;
     display: flex;
     justify-content: space-between;
