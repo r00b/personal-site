@@ -143,12 +143,12 @@ const Aircraft = () => {
           </div>
           <div className="stats">
             <div>
-              {aircraftData.numInRange}{" aircraft in range"}
-              {/*<TextTransition*/}
-              {/*  text={aircraftData.numInRange}*/}
-              {/*  direction={direction}*/}
-              {/*  inline={true}*/}
-              {/*/>*/}
+              {/*{aircraftData.numInRange}{" aircraft in range"}*/}
+              <TextTransition
+                text={aircraftData.numInRange}
+                // direction={direction}
+                // inline={true}
+              />
               {/*{" aircraft in range"}*/}
             </div>
           </div>
