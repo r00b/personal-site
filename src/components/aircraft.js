@@ -6,8 +6,7 @@ import loadable from "@loadable/component";
 // react-text-transition cannot do SSR
 const TextTransition = loadable(() => import("react-text-transition"));
 
-// const WS_URL = `ws://localhost:80/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
-const WS_URL = `wss://aircraft.robsteilberg.io:4433/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
+const WS_URL = `wss://aircraft.robsteilberg.io/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {
@@ -144,12 +143,13 @@ const Aircraft = () => {
           </div>
           <div className="stats">
             <div>
-              <TextTransition
-                text={aircraftData.numInRange}
-                direction={direction}
-                inline={true}
-              />
-              {" aircraft in range"}
+              {aircraftData.numInRange}{" aircraft in range"}
+              {/*<TextTransition*/}
+              {/*  text={aircraftData.numInRange}*/}
+              {/*  direction={direction}*/}
+              {/*  inline={true}*/}
+              {/*/>*/}
+              {/*{" aircraft in range"}*/}
             </div>
           </div>
         </div>
