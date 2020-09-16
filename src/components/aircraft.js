@@ -10,6 +10,12 @@ const WS_URL = `wss://aircraft.robsteilberg.io/airports/kdca?secret=${process.en
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {
+
+  if (typeof window !== `undefined`) {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
   /**
    * Format the text that goes into aircraft DOM, adding extra
    * data if it is available
