@@ -11,7 +11,7 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <Header />
-      <Avatar />
+      {/*<Avatar />*/}
       <Aircraft />
     </Layout>
   );
