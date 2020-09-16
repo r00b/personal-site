@@ -1,6 +1,5 @@
 html {
   height: -webkit-fill-available;
-  //display: flex;
 
   body {
     display: flex;
@@ -11,18 +10,6 @@ html {
     display: flex;
   }
 }
-//
-//body {
-//  height: inherit;
-//
-//  > div {
-//    height: inherit;
-//
-//    > div {
-//      height: inherit;
-//    }
-//  }
-//}
 
 body {
   margin: 0;
@@ -30,10 +17,9 @@ body {
   color: #ffffff;
 
   .bg-image {
-    //height: -webkit-fill-available;
-    //height: 100%;
-    //height: 100vh;
-    //height: -moz-available;
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: -moz-available;
     width: 100vw;
     display: flex;
     justify-content: space-between;
