@@ -30,14 +30,14 @@ body {
     background-size: cover;
     background-position: center center;
 
-    @media only screen and (max-width: 768px) {
-      background-size: 200%;
-      background-position: center top;
-    }
-
-    @media only screen and (max-width: 550px) {
-      background-size: 400%;
-    }
+    //@media only screen and (max-width: 768px) {
+    //  background-size: 200%;
+    //  background-position: center top;
+    //}
+    //
+    //@media only screen and (max-width: 550px) {
+    //  background-size: 400%;
+    //}
   }
 
   main {

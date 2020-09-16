@@ -136,10 +136,10 @@ const Aircraft = () => {
         </div>
         <div className="ribbon">
           <div className="cycle">
-            <div>Arriving: {aircraftData.arriving}</div>
-            <div>Arrived: {aircraftData.arrived}</div>
-            <div>Departing: {aircraftData.departing}</div>
-            <div>Departed: {aircraftData.departed}</div>
+            <div>Arriving:<span>{aircraftData.arriving}</span></div>
+            <div>Arrived:<span>{aircraftData.arrived}</span></div>
+            <div>Departing:<span>{aircraftData.departing}</span></div>
+            <div>Departed:<span>{aircraftData.departed}</span></div>
           </div>
           <div className="stats">
             <div>

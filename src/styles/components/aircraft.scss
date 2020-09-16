@@ -17,6 +17,10 @@
     display: flex;
     background-color: rgba(0, 0, 0, .3);
     padding: 0 10px;
+
+    span {
+      margin-left: 4px;
+    }
   }
 
   .cycle {
@@ -82,7 +86,7 @@
         opacity: 1;
         transform: translateY(0px);
       }
-      20% {
+      22% {
         opacity: 1;
         transform: translateY(0px);
       }
@@ -105,7 +109,7 @@
         opacity: 1;
         -webkit-transform: translateY(0px);
       }
-      20% {
+      22% {
         opacity: 1;
         -webkit-transform: translateY(0px);
       }
@@ -128,7 +132,7 @@
         opacity: 1;
         -moz-transform: translateY(0px);
       }
-      20% {
+      22% {
         opacity: 1;
         -moz-transform: translateY(0px);
       }
@@ -151,7 +155,7 @@
         opacity: 1;
         -ms-transform: translateY(0px);
       }
-      20% {
+      22% {
         opacity: 1;
         -ms-transform: translateY(0px);
       }
@@ -175,10 +179,6 @@
     position: relative;
     overflow: hidden;
     min-width: fit-content;
-
-    span {
-      margin-left: 5px;
-    }
 
     @media only screen and (max-width: 500px) {
       display: none;
