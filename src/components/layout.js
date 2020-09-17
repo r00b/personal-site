@@ -24,6 +24,13 @@ const Layout = ({ children }) => {
             ...GatsbyImageSharpFluid
           }
         }
+      },
+      fullsize: file(relativePath: { eq: "fullsize.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `);
@@ -33,7 +40,7 @@ const Layout = ({ children }) => {
       Tag="section"
       className="bg-image"
       alt="Cessna 172 Skyhawk"
-      fluid={data.skyhawk.childImageSharp.fluid}
+      fluid={data.fullsize.childImageSharp.fluid}
       style={{
         backgroundSize: "",
         backgroundPosition: "",
