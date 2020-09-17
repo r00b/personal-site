@@ -45,7 +45,7 @@ const SEO = ({ title, description }) => {
 
       <meta
         name="viewport"
-        content="width=device-width, height=device-height, initial-scale=1, viewport-fit=cover"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, viewport-fit=cover"
       />
     </Helmet>
   );
