@@ -42,6 +42,11 @@ const SEO = ({ title, description }) => {
       <meta property="og:title" content={seo.title} />
       <meta property="og:type" content="website" />
       <meta property="og:description" content={seo.description} />
+
+      <meta
+        name="viewport"
+        content="width=device-width, height=device-height, viewport-fit=contain"
+      />
     </Helmet>
   );
 };

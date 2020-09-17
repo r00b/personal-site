@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/components/header.scss";
+import resume from "../assets/robertsteilberg-resume.pdf"
 
 const Header = ({ showHome }) => (
   <header>
@@ -28,17 +29,17 @@ const Header = ({ showHome }) => (
       </a>
     )}
     {!showHome && (
-      <a href="https://www.robertsteilberg.com/content/RobertSteilberg-resume.pdf">
+      <a href={resume}>
         <svg
           className="resume"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 120 120">
-          <title>Résumé</title>
+          <title>Resume</title>
           <polygon points="103.192,120 16.526,120 16.526,0 55.96,0 55.96,46.301 103.192,46.301 " />
           <polygon points="64.476,0 64.476,38.717 103.192,38.717 " />
         </svg>
-        Résumé
+        Resume
       </a>
     )}
   </header>

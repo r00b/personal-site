@@ -6,11 +6,11 @@ import loadable from "@loadable/component";
 // react-text-transition cannot do SSR
 const TextTransition = loadable(() => import("react-text-transition"));
 
-// const WS_URL = `ws://localhost:80/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
-const WS_URL = `wss://aircraft.robsteilberg.io:4433/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
+const WS_URL = `wss://aircraft.robsteilberg.io/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {
+
   /**
    * Format the text that goes into aircraft DOM, adding extra
    * data if it is available
@@ -137,10 +137,10 @@ const Aircraft = () => {
         </div>
         <div className="ribbon">
           <div className="cycle">
-            <div>Arriving: {aircraftData.arriving}</div>
-            <div>Arrived: {aircraftData.arrived}</div>
-            <div>Departing: {aircraftData.departing}</div>
-            <div>Departed: {aircraftData.departed}</div>
+            <div>Arriving:<span>{aircraftData.arriving}</span></div>
+            <div>Arrived:<span>{aircraftData.arrived}</span></div>
+            <div>Departing:<span>{aircraftData.departing}</span></div>
+            <div>Departed:<span>{aircraftData.departed}</span></div>
           </div>
           <div className="stats">
             <div>
@@ -148,8 +148,11 @@ const Aircraft = () => {
                 text={aircraftData.numInRange}
                 direction={direction}
                 inline={true}
+                style={{
+                  width: "auto",
+                }}
               />
-              {" aircraft in range"}
+              <div className="text">aircraft in range</div>
             </div>
           </div>
         </div>

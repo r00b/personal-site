@@ -11,7 +11,7 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <Header showHome={true} />
     <div className="not-found">
-      <h1>NOT FOUND</h1>
+      <h1>Not found</h1>
       <p>Whatever you were looking for... it's not here.</p>
     </div>
   </Layout>
