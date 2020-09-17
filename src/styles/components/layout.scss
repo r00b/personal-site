@@ -3,7 +3,15 @@ html {
   height: -webkit-fill-available;
   height: -moz-available;
 
+  #___gatsby, #gatsby-focus-wrapper {
+    //height: var(--vh, 100vh);
+    height: -webkit-fill-available;
+    height: -moz-available;
+  }
+
   body {
+    height: -webkit-fill-available;
+    height: -moz-available;
 
     .bg-image {
       //height: var(--vh, 100vh);
