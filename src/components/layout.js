@@ -8,6 +8,15 @@ import "../styles/global.scss";
 import "../styles/components/layout.scss";
 
 const Layout = ({ children }) => {
+  if (typeof window !== `undefined`) {
+    const setViewportHeight = function () {
+      const viewportHeight = window.innerHeight;
+      document.documentElement.style.setProperty("--vh", `${viewportHeight}px`);
+    };
+    setViewportHeight();
+    window.addEventListener("resize", setViewportHeight);
+  }
+
   const data = useStaticQuery(graphql`
     query {
       skyhawk: file(relativePath: { eq: "skyhawk.jpg" }) {

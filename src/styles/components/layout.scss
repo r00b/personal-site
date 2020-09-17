@@ -1,21 +1,13 @@
 html {
-  height: calc(var(--vh, 1vh) * 100);
+  height: var(--vh, 100vh);
+
+  body {
+
+    .bg-image {
+      height: var(--vh, 100vh);
+    }
+  }
 }
-//  height: -webkit-fill-available;
-//
-//  body {
-//    //display: flex;
-//    height: -webkit-fill-available;
-//  }
-//
-//  #___gatsby {
-//    height: -webkit-fill-available;
-//  }
-//
-//  #gatsby-focus-wrapper {
-//    height: -webkit-fill-available;
-//  }
-//}
 
 body {
   margin: 0;
@@ -23,10 +15,6 @@ body {
   color: #ffffff;
 
   .bg-image {
-    //height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    //height: -webkit-fill-available;
-    //height: -moz-available;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -49,7 +37,6 @@ body {
 
   main {
     height: 100%;
-    //height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
   }
