@@ -14,7 +14,6 @@ const Layout = ({ children }) => {
       document.documentElement.style.setProperty("--vh", `${viewportHeight}px`);
     };
     setViewportHeight();
-    // window.addEventListener("resize", setViewportHeight);
   }
 
   const data = useStaticQuery(graphql`
