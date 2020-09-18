@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   return (
     <BackgroundImage
       Tag="section"
-      className="bg-image"
+      className="backdrop"
       alt="Cessna 172 Skyhawk"
       fluid={data.skyhawk.childImageSharp.fluid}
       style={{
