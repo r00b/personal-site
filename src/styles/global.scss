@@ -1,4 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  font-family: "EB Garamond", sans-serif;
+  color: #ffffff;
   background-color: #3478a9;
 }
 
@@ -10,4 +16,8 @@ a {
     text-decoration: underline;
     cursor: pointer;
   }
+}
+
+svg {
+  fill: #ffffff;
 }

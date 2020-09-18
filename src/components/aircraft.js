@@ -10,7 +10,6 @@ const WS_URL = `wss://aircraft.robsteilberg.io/airports/kdca?secret=${process.en
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {
-
   /**
    * Format the text that goes into aircraft DOM, adding extra
    * data if it is available
@@ -123,10 +122,10 @@ const Aircraft = () => {
 
   return (
     <>
-      <div className="aircraft">
-        <div className="header">
+      <div className="flex flex-col mt-auto text-xl">
+        <div className="text-lg ml-3">
           KDCA live feed
-          <sup>
+          <sup className="ml-1 text-sm italic">
             <a
               href="https://github.com/robertsteilberg/roob1090"
               target="_blank"
@@ -135,25 +134,32 @@ const Aircraft = () => {
             </a>
           </sup>
         </div>
-        <div className="ribbon">
-          <div className="cycle">
-            <div>Arriving:<span>{aircraftData.arriving}</span></div>
-            <div>Arrived:<span>{aircraftData.arrived}</span></div>
-            <div>Departing:<span>{aircraftData.departing}</span></div>
-            <div>Departed:<span>{aircraftData.departed}</span></div>
-          </div>
-          <div className="stats">
+        <div className="h-12 px-3 flex bg-black bg-opacity-25">
+          <div className="cycle w-full flex items-center relative overflow-hidden">
             <div>
-              <TextTransition
-                text={aircraftData.numInRange}
-                direction={direction}
-                inline={true}
-                style={{
-                  width: "auto",
-                }}
-              />
-              <div className="text">aircraft in range</div>
+              Arriving:<span>{aircraftData.arriving}</span>
             </div>
+            <div>
+              Arrived:<span>{aircraftData.arrived}</span>
+            </div>
+            <div>
+              Departing:<span>{aircraftData.departing}</span>
+            </div>
+            <div>
+              Departed:<span>{aircraftData.departed}</span>
+            </div>
+          </div>
+          <div className="inline-flex items-center whitespace-no-wrap">
+            <TextTransition
+              className="difuhseuyrfgseuyrfg"
+              text={aircraftData.numInRange}
+              direction={direction}
+              inline={true}
+              style={{
+                width: "auto",
+              }}
+            />
+            <span className="pl-1">aircraft in range</span>
           </div>
         </div>
       </div>

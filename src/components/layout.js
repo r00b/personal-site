@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import BackgroundImage from "gatsby-background-image";
 
-import "../styles/global.scss";
 import "../styles/components/layout.scss";
 
 const Layout = ({ children }) => {
@@ -39,7 +38,7 @@ const Layout = ({ children }) => {
         backgroundSize: "",
         backgroundPosition: "",
       }}>
-      <main>{children}</main>
+      <main className="h-full flex flex-col">{children}</main>
     </BackgroundImage>
   );
 };

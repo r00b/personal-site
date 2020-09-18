@@ -1,6 +1,6 @@
 const defaults = {
   title: "Rob Steilberg",
-  description: "Rob Steilberg's home page",
+  description: "Robert Steilberg's home page",
   icon: "src/images/favicon.png",
 };
 
@@ -34,7 +34,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
