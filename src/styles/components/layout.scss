@@ -2,14 +2,11 @@ html {
   height: var(--vh, 100vh);
 }
 
-body {
 
-  .bg-image {
-    height: var(--vh, 100vh);
-  }
+.backdrop {
+  height: var(--vh, 100vh);
+}
 
-  .bg-image:before, .bg-image:after {
-    background-size: cover;
-    background-position: center center;
-  }
+.backdrop:before, .backdrop:after {
+  @apply bg-cover bg-center;
 }
