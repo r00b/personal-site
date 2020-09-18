@@ -4,8 +4,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Header from "../components/header";
 
-import "../styles/pages/404.scss";
-
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
