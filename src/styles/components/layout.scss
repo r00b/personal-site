@@ -1,15 +1,11 @@
-html {
-  height: var(--vh, 100vh);
+html, main, .backdrop {
+  min-height: var(--vh, 100vh);
 }
 
-body {
+.backdrop:before, .backdrop:after {
+  @apply bg-cover bg-right;
 
-  .bg-image {
-    height: var(--vh, 100vh);
-  }
-
-  .bg-image:before, .bg-image:after {
-    background-size: cover;
-    background-position: center center;
+  @screen md {
+    @apply bg-center;
   }
 }

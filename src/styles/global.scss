@@ -3,21 +3,13 @@
 @tailwind utilities;
 
 body {
-  font-family: "EB Garamond", sans-serif;
-  color: #ffffff;
-  background-color: #3478a9;
+  @apply font-serif bg-sky-blue text-white;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-
-  &:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+a:hover {
+  @apply underline;
 }
 
 svg {
-  fill: #ffffff;
+  @apply fill-current;
 }
