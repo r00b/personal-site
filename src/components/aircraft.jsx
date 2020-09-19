@@ -148,7 +148,7 @@ const Aircraft = () => {
             Departed:<span>{aircraftData.departed}</span>
           </div>
         </div>
-        <div className="inline-flex items-center relative overflow-hidden whitespace-no-wrap">
+        <div className="hidden sm:inline-flex items-center relative overflow-hidden whitespace-no-wrap">
           <TextTransition
             text={aircraftData.numInRange}
             direction={direction}
