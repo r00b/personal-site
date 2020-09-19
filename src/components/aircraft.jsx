@@ -50,7 +50,7 @@ const Aircraft = () => {
       const dom = [aircraftDom(aircraft[0], inbound)];
       if (aircraft[1]) {
         dom.push(
-          <span className="next-aircraft">
+          <span className="hidden lg:flex">
             {", followed by "}
             {aircraftDom(aircraft[1], inbound)}
           </span>
@@ -133,7 +133,7 @@ const Aircraft = () => {
           </a>
         </sup>
       </div>
-      <div className="h-12 px-3 flex bg-black bg-opacity-25">
+      <div className="h-12 px-3 flex text-lg md:text-xl bg-black bg-opacity-25">
         <div className="cycle w-full flex items-center relative overflow-hidden">
           <div>
             Arriving:<span>{aircraftData.arriving}</span>

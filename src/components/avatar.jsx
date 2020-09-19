@@ -18,17 +18,17 @@ const Avatar = () => {
   return (
     <div className="flex flex-col self-end items-center">
       <Img
-        className="h-56 w-56 m-8 rounded shadow"
+        className="h-48 w-48 md:h-56 md:w-56 m-5 md:m-8 rounded shadow"
         fluid={data.avatar.childImageSharp.fluid}
       />
       <div className="flex flex-col flex-center">
         <h1 className="text-2xl text-center uppercase">Rob Steilberg</h1>
-        <div className="mt-3 text-lg text-center">
+        <div className="mt-3 text-md md:text-lg text-center">
           <h2>
             aviation enthusiast
             <br />& student pilot
           </h2>
-          <hr className="h-px my-1 border-0 bg-white" />
+          <hr className="h-px my-1 mx-3 md:mx-0 border-0 bg-white" />
           <h2>
             software development
             <br />

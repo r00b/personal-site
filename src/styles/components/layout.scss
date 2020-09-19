@@ -1,12 +1,11 @@
-html {
-  height: var(--vh, 100vh);
-}
-
-
-.backdrop {
-  height: var(--vh, 100vh);
+html, main, .backdrop {
+  min-height: var(--vh, 100vh);
 }
 
 .backdrop:before, .backdrop:after {
-  @apply bg-cover bg-center;
+  @apply bg-cover bg-right;
+
+  @screen md {
+    @apply bg-center;
+  }
 }
