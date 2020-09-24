@@ -31,7 +31,7 @@ const Aircraft = () => {
   function aircraftDom(ac, inbound) {
     return (
       <a
-        key={ac.hex}
+        className="ml-1"
         target="_blank"
         rel="noreferrer"
         href={"https://flightaware.com/live/flight/" + ac.flight}>
@@ -43,22 +43,28 @@ const Aircraft = () => {
   /**
    * Build the DOM that defines tracking data
    */
-  function domify(aircraft, inbound) {
+  function domify(aircraft, inbound = false) {
     if (_.get(aircraft, "length")) {
-      const dom = [aircraftDom(aircraft[0], inbound)];
-      if (aircraft[1]) {
+      const first = aircraft[0];
+      const second = aircraft[1];
+      const dom = [<span key={first.hex}>{aircraftDom(first, inbound)}</span>];
+      if (second) {
         dom.push(
-          <span className="hidden lg:flex">
-            {", followed by "}
-            {aircraftDom(aircraft[1], inbound)}
+          <span key={second.hex} className="hidden lg:flex">
+            , followed by
+            {aircraftDom(second, inbound)}
           </span>
         );
       }
       return dom;
     } else {
-      return "none in range";
+      return <span className="ml-1">none in range</span>;
     }
   }
+
+  const getArr = array => {
+    return array || [];
+  };
 
   /**
    * Parse the WebSocket message and build the data object
@@ -68,10 +74,11 @@ const Aircraft = () => {
       const data = JSON.parse(event.data);
 
       const result = {
-        arriving: domify(data.arriving, true),
-        arrived: domify(data.arrived, true),
-        departing: domify(data.departing, false),
-        departed: domify(data.departed, false),
+        arriving: getArr(data.arriving),
+        arrived: getArr(data.arrived),
+        departing: getArr(data.departing),
+        departed: getArr(data.departed),
+        onRunway: getArr(data.departed),
         numInRange: _.get(data, "stats.numInRange", 0),
       };
 
@@ -82,7 +89,7 @@ const Aircraft = () => {
   }
 
   /**
-   * Attach a WebSocket to recieve aircraft data
+   * Attach a WebSocket to receive aircraft data
    */
   function initSocket() {
     const ws = new WebSocket(process.env.GATSBY_SERVE1090_URL);
@@ -98,10 +105,10 @@ const Aircraft = () => {
   }
 
   const initialAircraftData = {
-    arriving: "none in range",
-    arrived: "none in range",
-    departing: "none in range",
-    departed: "none in range",
+    arriving: [],
+    arrived: [],
+    departing: [],
+    departed: [],
     numInRange: 0,
   };
 
@@ -137,18 +144,10 @@ const Aircraft = () => {
       </div>
       <div className="h-12 px-3 flex text-lg md:text-xl bg-black bg-opacity-25">
         <div className="cycle w-full flex items-center relative overflow-hidden">
-          <div>
-            Arriving:<span>{aircraftData.arriving}</span>
-          </div>
-          <div>
-            Arrived:<span>{aircraftData.arrived}</span>
-          </div>
-          <div>
-            Departing:<span>{aircraftData.departing}</span>
-          </div>
-          <div>
-            Departed:<span>{aircraftData.departed}</span>
-          </div>
+          <div>Arriving:{domify(aircraftData.arriving, true)}</div>
+          <div>Arrived:{domify(aircraftData.arrived, true)}</div>
+          <div>Departing:{domify(aircraftData.departing)}</div>
+          <div>Departed:{domify(aircraftData.departed)}</div>
         </div>
         <div className="hidden sm:inline-flex items-center relative overflow-hidden whitespace-no-wrap">
           <TextTransition
