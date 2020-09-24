@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../styles/components/aircraft.scss";
 import _ from "lodash";
 import loadable from "@loadable/component";
-
 // react-text-transition cannot do SSR
 const TextTransition = loadable(() => import("react-text-transition"));
 
-const WS_URL = `wss://aircraft.robsteilberg.io/airports/kdca?secret=${process.env.GATSBY_SERVE1090_SECRET}`;
 const SOCKET_RETRY_TIME = 5000;
 
 const Aircraft = () => {
@@ -87,7 +85,11 @@ const Aircraft = () => {
    * Attach a WebSocket to recieve aircraft data
    */
   function initSocket() {
-    const ws = new WebSocket(WS_URL);
+    const ws = new WebSocket(process.env.GATSBY_SERVE1090_URL);
+    ws.addEventListener("open", () => {
+      // send initial auth token
+      ws.send(JSON.stringify({ token: process.env.GATSBY_SERVE1090_TOKEN }));
+    });
     ws.addEventListener("close", () => {
       setAircraftData(initialAircraftData);
       setTimeout(initSocket, SOCKET_RETRY_TIME);
