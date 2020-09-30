@@ -79,7 +79,7 @@ const Aircraft = () => {
         departing: getArr(data.departing),
         departed: getArr(data.departed),
         onRunway: getArr(data.departed),
-        numInRange: _.get(data, "stats.numInRange", 0),
+        numInRange: _.get(data, "stats.validAircraftCount", 0),
       };
 
       setAircraftData(result);
