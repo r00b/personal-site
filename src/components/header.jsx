@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/components/header.scss";
-import resume from "../assets/robsteilberg-resume.pdf";
 
 const Header = ({ showHome }) => {
   const content = showHome ? (
@@ -20,7 +19,7 @@ const Header = ({ showHome }) => {
         </svg>
         GitHub
       </a>
-      <a href={resume}>
+      <a href="/resume.pdf">
         <svg
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
