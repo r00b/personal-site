@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/components/header.scss";
-import resume from "../assets/robertsteilberg-resume.pdf";
+import resume from "../assets/robsteilberg-resume.pdf";
 
 const Header = ({ showHome }) => {
   const content = showHome ? (
