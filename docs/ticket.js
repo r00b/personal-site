@@ -164,7 +164,7 @@ const Aircraft = () => {
         KDCA live feed
         <sup className="ml-1 text-sm italic">
           <a
-            href="https://github.com/robertsteilberg/roob1090"
+            href="https://github.com/r00b/roob1090"
             target="_blank"
             rel="noreferrer">
             what's this?
@@ -186,7 +186,7 @@ const Aircraft = () => {
             Departed:<span>{aircraftData.departed}</span>
           </div>
         </div>
-        <div className="hidden sm:inline-flex items-center relative overflow-hidden whitespace-no-wrap">
+        <div className="hidden sm:inline-flex items-center relative overflow-hidden whitespace-nowrap">
           <TextTransition
             text={aircraftData.numInRange}
             direction={direction}

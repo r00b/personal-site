@@ -1,8 +1,4 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: ["./src/**/*.js", "./src/**/*.jsx"],
   theme: {
     fontFamily: {
@@ -16,7 +12,7 @@ module.exports = {
       ],
     },
     boxShadow: {
-      default:
+      DEFAULT:
         "0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);",
     },
     extend: {

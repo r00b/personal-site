@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     title: defaults.title,
     description: defaults.description,
-    author: "@robertsteilberg",
+    author: "@r00b",
     url: "",
     icon: defaults.icon,
   },
@@ -72,5 +72,6 @@ module.exports = {
         precachePages: [`/`],
       },
     },
+    `gatsby-plugin-postcss`
   ],
 };

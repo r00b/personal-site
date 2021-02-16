@@ -1,6 +1,6 @@
 .cycle {
   > div {
-    @apply flex absolute overflow-hidden whitespace-no-wrap opacity-0 animate-cycle;
+    @apply flex absolute overflow-hidden whitespace-nowrap opacity-0 animate-cycle;
     transform: translateY(50px);
 
     &:nth-child(2) {
