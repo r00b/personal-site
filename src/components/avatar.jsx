@@ -32,7 +32,7 @@ const Avatar = () => {
           <h2>
             software development
             <br />
-            engineer, Esri
+            engineer, ForeFlight
           </h2>
         </div>
       </div>
