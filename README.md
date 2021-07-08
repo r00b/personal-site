@@ -8,6 +8,6 @@ This is the repo for my personal website, [robsteilberg.io](https://www.robsteil
 
 1. `yarn`
 2. `yarn dev`
-2. `yarn build` for a production build
+3. `yarn build` for a production build
 
 See the [Gatsby docs](https://www.gatsbyjs.com/docs/) for more info.

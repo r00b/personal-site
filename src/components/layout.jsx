@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import BackgroundImage from "gatsby-background-image";
@@ -41,10 +40,6 @@ const Layout = ({ children }) => {
       <main className="h-full flex flex-col">{children}</main>
     </BackgroundImage>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

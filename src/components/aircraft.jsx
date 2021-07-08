@@ -98,6 +98,7 @@ const Aircraft = () => {
       ws.send(JSON.stringify({ token: process.env.GATSBY_SERVE1090_TOKEN }));
     });
     ws.addEventListener("close", () => {
+      ws.removeEventListener("message", parseMessage);
       setAircraftData(initialAircraftData);
       setTimeout(initSocket, SOCKET_RETRY_TIME);
     });
@@ -116,6 +117,7 @@ const Aircraft = () => {
   const [numInRange, setNumInRange] = useState(0);
   const [direction, setDirection] = useState("up");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(initSocket, []);
 
   /**

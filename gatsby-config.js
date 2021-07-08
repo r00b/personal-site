@@ -43,6 +43,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -62,7 +63,7 @@ module.exports = {
         display: `standalone`,
         icon: defaults.icon,
         icon_options: {
-          purpose: `maskable`,
+          purpose: `maskable any`,
         },
       },
     },
@@ -71,6 +72,6 @@ module.exports = {
       options: {
         precachePages: [`/`],
       },
-    }
+    },
   ],
 };
