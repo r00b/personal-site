@@ -6,8 +6,8 @@ This is the repo for my personal website, [robsteilberg.io](https://www.robsteil
 
 ### Installation
 
-1. `yarn`
-2. `yarn dev`
-3. `yarn build` for a production build
+1. `npm install`
+2. `npm run dev`
+3. `npm run build && npm run serve` for a production build
 
 See the [Gatsby docs](https://www.gatsbyjs.com/docs/) for more info.
