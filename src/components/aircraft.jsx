@@ -134,7 +134,7 @@ const Aircraft = () => {
   return (
     <div className="flex flex-col mt-auto text-xl">
       <div className="text-lg ml-3">
-        KDCA live feed
+        KAUS live feed
         <sup className="ml-1 text-sm italic">
           <a
             href="https://github.com/r00b/roob1090"

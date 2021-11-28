@@ -4,6 +4,21 @@
   "description": "Personal website for Rob Steilberg",
   "version": "2.0.0",
   "author": "Robert Steilberg <rsteilberg@gmail.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop --host=0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r00b/personal-site"
+  },
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "gatsby": "^3.9.0",
@@ -31,23 +46,8 @@
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop --host=0.0.0.0",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/r00b/personal-site"
-  },
   "volta": {
-    "node": "16.4.2",
-    "npm": "7.19.1"
+    "node": "16.13.0",
+    "npm": "8.1.4"
   }
 }
