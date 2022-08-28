@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       skyhawk: file(relativePath: { eq: "skyhawk.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

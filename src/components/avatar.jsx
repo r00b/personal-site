@@ -4,15 +4,15 @@ import Img from "gatsby-image";
 
 const Avatar = () => {
   const data = useStaticQuery(graphql`
-    query {
-      avatar: file(relativePath: { eq: "avatar.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+      query {
+          avatar: file(relativePath: { eq: "avatar.jpg" }) {
+              childImageSharp {
+                  fluid {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
           }
-        }
       }
-    }
   `);
 
   return (
@@ -26,11 +26,11 @@ const Avatar = () => {
         <div className="mt-3 text-md md:text-lg text-center">
           <h2>
             aviation enthusiast
-            <br />& private pilot
+            <br />& instrument rated pilot
           </h2>
           <hr className="h-px my-1 mx-3 md:mx-0 border-0 bg-white" />
           <h2>
-            software development
+            senior software development
             <br />
             engineer, ForeFlight
           </h2>
