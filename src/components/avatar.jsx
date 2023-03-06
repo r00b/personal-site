@@ -26,7 +26,7 @@ const Avatar = () => {
         <div className="mt-3 text-md md:text-lg text-center">
           <h2>
             aviation enthusiast
-            <br />& instrument rated pilot
+            <br />& commercial pilot
           </h2>
           <hr className="h-px my-1 mx-3 md:mx-0 border-0 bg-white" />
           <h2>
