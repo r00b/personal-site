@@ -37,7 +37,7 @@ const Header = ({ showHome }) => {
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 487 487">
-          <title>Photos</title>
+          <title>Photography</title>
           <g>
             <g>
               <path d="M308.1,277.95c0,35.7-28.9,64.6-64.6,64.6s-64.6-28.9-64.6-64.6s28.9-64.6,64.6-64.6S308.1,242.25,308.1,277.95z
@@ -48,7 +48,7 @@ const Header = ({ showHome }) => {
             </g>
           </g>
         </svg>
-        Photos
+        Photography
       </a>
     </>
   );
