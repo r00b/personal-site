@@ -30,9 +30,9 @@ const Avatar = () => {
           </h2>
           <hr className="h-px my-1 mx-3 md:mx-0 border-0 bg-white" />
           <h2>
-            senior software development
+            senior software engineer,
             <br />
-            engineer, Jeppesen ForeFlight
+            Jeppesen ForeFlight
           </h2>
         </div>
       </div>
