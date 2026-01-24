@@ -12,7 +12,7 @@ const IndexPage = () => {
       <Seo />
       <Header />
       <Avatar />
-      <Aircraft />
+      {/* <Aircraft /> */}
     </Layout>
   );
 };
