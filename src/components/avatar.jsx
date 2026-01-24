@@ -32,7 +32,7 @@ const Avatar = () => {
           <h2>
             senior software development
             <br />
-            engineer, ForeFlight / Boeing
+            engineer, Jeppesen ForeFlight
           </h2>
         </div>
       </div>
